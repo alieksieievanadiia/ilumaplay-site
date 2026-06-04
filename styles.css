@@ -15,7 +15,7 @@ body {
   margin: 0;
   color: var(--ink);
   background: #f2f2f2;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Coiny", Arial, Helvetica, sans-serif;
 }
 
 img,
@@ -259,8 +259,26 @@ a {
   }
 
   .thumbs {
+    --slide-size: min(72vw, 230px);
+    display: flex;
     gap: 18px;
     margin-top: 18px;
+    margin-left: -18px;
+    margin-right: -18px;
+    padding: 0 calc((100vw - var(--slide-size)) / 2);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: calc((100vw - var(--slide-size)) / 2);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .thumbs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .thumb {
+    flex: 0 0 var(--slide-size);
+    scroll-snap-align: center;
   }
 
   .tagline {
