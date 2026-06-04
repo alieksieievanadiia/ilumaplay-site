@@ -1,141 +1,77 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DreamLight - светильник-конструктор</title>
+    <title>IlumaPlay</title>
     <meta
       name="description"
-      content="Детский светильник-конструктор со сменными цветными фигурками, мягким сиянием и готовыми сюжетами для комнаты."
+      content="IlumaPlay is an interactive lamp with collectible figures and discovery cards for children."
     >
     <link rel="preload" as="image" href="assets/img_5346.jpg">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <header class="topbar" aria-label="Главная навигация">
-      <a class="brand" href="#top" aria-label="DreamLight">
-        <span class="brand-mark"></span>
-        DreamLight
-      </a>
-      <nav class="nav">
-        <a href="#gallery">Галерея</a>
-        <a href="#details">Детали</a>
-        <a href="#video">Видео</a>
-      </nav>
-    </header>
+    <main class="page" aria-label="IlumaPlay">
+      <header class="site-header">
+        <a class="logo" href="#" aria-label="IlumaPlay">
+          <span class="logo-star" aria-hidden="true">&#10022;</span>
+          <span>IlumaPlay</span>
+        </a>
+        <div class="language-switch" aria-label="Language">
+          <button class="lang-button is-active" type="button" data-lang="en">EN</button>
+          <button class="lang-button" type="button" data-lang="pt">PT</button>
+        </div>
+      </header>
 
-    <main id="top">
-      <section class="hero" aria-label="DreamLight">
-        <img class="hero-image" src="assets/img_5346.jpg" alt="Светящийся детский светильник с цветными фигурками">
-        <div class="hero-shade"></div>
-        <div class="hero-copy">
-          <p class="eyebrow">Светильник-конструктор</p>
-          <h1>DreamLight</h1>
-          <p>
-            Мягкий ночной свет и сменные яркие фигурки превращают обычную полку
-            в маленькую историю: космос, цветы, динозавр и уютное сияние перед сном.
+      <section class="hero">
+        <div class="hero-text">
+          <p data-i18n="intro">
+            IlumaPlay is an interactive lamp with collectible figures and discovery cards.
+            Children need a task, find the matching figure and place it on the lamp to
+            remember what they learned.
           </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#gallery">Смотреть фото</a>
-            <a class="button secondary" href="#details">Что внутри</a>
-          </div>
+        </div>
+        <div class="hero-visual" aria-label="IlumaPlay lamp and discovery set">
+          <img class="kit-image" src="assets/kit-cutout.png" alt="IlumaPlay cloth bag and discovery card">
+          <img class="lamp-image" src="assets/lamp-cutout.png" alt="IlumaPlay lamp with colorful figures">
         </div>
       </section>
 
-      <section class="intro" aria-label="Коротко о светильнике">
-        <div>
-          <span class="stat">10</span>
-          <p>фото в галерее</p>
-        </div>
-        <div>
-          <span class="stat">1</span>
-          <p>видео с демонстрацией</p>
-        </div>
-        <div>
-          <span class="stat">мягкий</span>
-          <p>свет для детской</p>
-        </div>
+      <section class="thumbs" aria-label="Product photos">
+        <button class="thumb" type="button" data-src="assets/img_5229.jpg" aria-label="Open product photo 1">
+          <img src="assets/img_5229.jpg" alt="IlumaPlay lamp glowing with space figures">
+        </button>
+        <button class="thumb" type="button" data-src="assets/img_5400.jpg" aria-label="Open product photo 2">
+          <img src="assets/img_5400.jpg" alt="IlumaPlay lamp with nature and dinosaur figures">
+        </button>
+        <button class="thumb" type="button" data-src="assets/img_5321.jpg" aria-label="Open product photo 3">
+          <img src="assets/img_5321.jpg" alt="IlumaPlay lamp with flower figures">
+        </button>
       </section>
 
-      <section class="section product-story" id="details">
-        <div class="section-heading">
-          <p class="eyebrow">Идея</p>
-          <h2>Один светильник, много настроений</h2>
-        </div>
-        <div class="story-grid">
-          <article>
-            <h3>Сменные фигурки</h3>
-            <p>Цветные элементы крепятся на прозрачную основу и создают разные композиции.</p>
-          </article>
-          <article>
-            <h3>Нежное свечение</h3>
-            <p>Полупрозрачный корпус рассеивает свет, поэтому он выглядит спокойно и уютно.</p>
-          </article>
-          <article>
-            <h3>Игровой формат</h3>
-            <p>Ребёнок может переставлять детали и собирать свою мини-сцену каждый вечер.</p>
-          </article>
-        </div>
+      <section class="tagline" aria-label="Product message">
+        <p data-i18n="tagline">Build your collection! Explore worlds</p>
       </section>
 
-      <section class="section gallery-section" id="gallery">
-        <div class="section-heading">
-          <p class="eyebrow">Галерея</p>
-          <h2>Живые кадры изделия</h2>
-        </div>
-        <div class="gallery" aria-label="Фотографии светильника">
-          <button class="photo featured" type="button" data-src="assets/img_5346.jpg" aria-label="Открыть фото 1">
-            <img src="assets/img_5346.jpg" alt="Светильник с фигурками динозавра, планеты и цветов">
-          </button>
-          <button class="photo tall" type="button" data-src="assets/img_5363.jpg" aria-label="Открыть фото 2">
-            <img src="assets/img_5363.jpg" alt="Светильник с цветными декоративными элементами">
-          </button>
-          <button class="photo" type="button" data-src="assets/img_5375.jpg" aria-label="Открыть фото 3">
-            <img src="assets/img_5375.jpg" alt="Детали светильника крупным планом">
-          </button>
-          <button class="photo" type="button" data-src="assets/img_5494.jpg" aria-label="Открыть фото 4">
-            <img src="assets/img_5494.jpg" alt="Светильник с мягкой подсветкой">
-          </button>
-          <button class="photo" type="button" data-src="assets/img_5400.jpg" aria-label="Открыть фото 5">
-            <img src="assets/img_5400.jpg" alt="Композиция светильника на светлом фоне">
-          </button>
-          <button class="photo tall" type="button" data-src="assets/img_5514.jpg" aria-label="Открыть фото 6">
-            <img src="assets/img_5514.jpg" alt="Светильник с декоративными насадками">
-          </button>
-          <button class="photo" type="button" data-src="assets/img_5229.jpg" aria-label="Открыть фото 7">
-            <img src="assets/img_5229.jpg" alt="Светящийся корпус светильника">
-          </button>
-          <button class="photo" type="button" data-src="assets/img_5270.jpg" aria-label="Открыть фото 8">
-            <img src="assets/img_5270.jpg" alt="Цветные детали для светильника">
-          </button>
-          <button class="photo" type="button" data-src="assets/img_5321.jpg" aria-label="Открыть фото 9">
-            <img src="assets/img_5321.jpg" alt="Декоративная сцена светильника">
-          </button>
-          <button class="photo" type="button" data-src="assets/img_5333.jpg" aria-label="Открыть фото 10">
-            <img src="assets/img_5333.jpg" alt="Светильник в собранном виде">
-          </button>
-        </div>
-      </section>
-
-      <section class="section video-section" id="video">
-        <div class="section-heading">
-          <p class="eyebrow">Видео</p>
-          <h2>Как светильник выглядит в движении</h2>
-        </div>
+      <section class="video-block" aria-label="IlumaPlay video">
         <video controls preload="metadata" poster="assets/video-poster.jpg">
           <source src="assets/story.mp4" type="video/mp4">
-          Ваш браузер не поддерживает видео.
+          Your browser does not support video playback.
         </video>
       </section>
+
+      <footer class="contact">
+        <p>
+          <span data-i18n="contact">Contact us:</span>
+          <a href="mailto:ilumaplaygeral@gmail.com">ilumaplaygeral@gmail.com</a>
+        </p>
+      </footer>
     </main>
 
-    <footer class="footer">
-      <p>DreamLight - светильник-конструктор для уютной детской комнаты.</p>
-    </footer>
-
-    <dialog class="lightbox" aria-label="Просмотр фотографии">
-      <button class="close" type="button" aria-label="Закрыть">×</button>
-      <img src="assets/img_5346.jpg" alt="">
+    <dialog class="lightbox" aria-label="Photo preview">
+      <button class="close" type="button" aria-label="Close">&times;</button>
+      <img src="assets/img_5229.jpg" alt="">
     </dialog>
 
     <script src="script.js"></script>
