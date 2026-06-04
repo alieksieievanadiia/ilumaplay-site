@@ -2,7 +2,7 @@ const copy = {
   en: {
     intro:
       "IlumaPlay is an interactive lamp with collectible figures and discovery cards. Children need a task, find the matching figure and place it on the lamp to remember what they learned.",
-    tagline: "Build your collection! Explore worlds",
+    tagline: "Build your collection!\nExplore worlds!",
     contact: "Contact us:",
     lang: "en",
     description:
@@ -11,7 +11,7 @@ const copy = {
   pt: {
     intro:
       "A IlumaPlay é um candeeiro interativo com figuras colecionáveis e cartas de descoberta. As crianças recebem uma tarefa, encontram a figura certa e colocam-na no candeeiro para recordar o que aprenderam.",
-    tagline: "Constrói a tua coleção! Explora mundos",
+    tagline: "Constrói a tua coleção!\nExplora mundos!",
     contact: "Contacte-nos:",
     lang: "pt-PT",
     description:
@@ -55,7 +55,6 @@ document.querySelectorAll(".thumb").forEach((button) => {
   });
 });
 
-const slider = document.querySelector(".thumbs");
 const sliderItems = Array.from(document.querySelectorAll(".thumb"));
 const sliderDots = Array.from(document.querySelectorAll(".slider-dot"));
 const sliderPrev = document.querySelector(".slider-prev");
