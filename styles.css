@@ -268,22 +268,16 @@ a {
   }
 
   .photo-slider {
+    --slide-size: min(78vw, 270px);
     margin-top: 18px;
-    overflow: hidden;
   }
 
   .thumbs {
-    --slide-size: min(78vw, 270px);
-    display: flex;
-    gap: 18px;
+    display: block;
     width: var(--slide-size);
     margin-left: auto;
     margin-right: auto;
     padding: 0;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-padding-inline: 0;
-    -webkit-overflow-scrolling: touch;
   }
 
   .thumbs::-webkit-scrollbar {
@@ -291,8 +285,12 @@ a {
   }
 
   .thumb {
-    flex: 0 0 var(--slide-size);
-    scroll-snap-align: center;
+    display: none;
+    width: var(--slide-size);
+  }
+
+  .thumb.is-active {
+    display: block;
   }
 
   .slider-arrow {

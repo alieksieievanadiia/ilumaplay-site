@@ -67,37 +67,21 @@ const updateSliderDots = () => {
   sliderDots.forEach((dot, index) => {
     dot.classList.toggle("is-active", index === currentSlide);
   });
+  sliderItems.forEach((item, index) => {
+    item.classList.toggle("is-active", index === currentSlide);
+  });
 };
 
 const goToSlide = (index) => {
-  if (!slider || sliderItems.length === 0) return;
+  if (sliderItems.length === 0) return;
   currentSlide = (index + sliderItems.length) % sliderItems.length;
-  sliderItems[currentSlide].scrollIntoView({
-    behavior: "smooth",
-    block: "nearest",
-    inline: "center",
-  });
   updateSliderDots();
 };
 
 sliderPrev?.addEventListener("click", () => goToSlide(currentSlide - 1));
 sliderNext?.addEventListener("click", () => goToSlide(currentSlide + 1));
 
-slider?.addEventListener("scroll", () => {
-  const center = slider.scrollLeft + slider.clientWidth / 2;
-  let nearest = 0;
-  let nearestDistance = Infinity;
-  sliderItems.forEach((item, index) => {
-    const itemCenter = item.offsetLeft + item.offsetWidth / 2;
-    const distance = Math.abs(center - itemCenter);
-    if (distance < nearestDistance) {
-      nearest = index;
-      nearestDistance = distance;
-    }
-  });
-  currentSlide = nearest;
-  updateSliderDots();
-}, { passive: true });
+updateSliderDots();
 
 closeButton?.addEventListener("click", () => lightbox?.close());
 
