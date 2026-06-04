@@ -46,25 +46,14 @@ a {
 }
 
 .logo {
-  position: relative;
   display: inline-flex;
-  align-items: baseline;
-  gap: 2px;
-  color: var(--purple);
   text-decoration: none;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(28px, 4vw, 46px);
-  font-weight: 700;
-  letter-spacing: 0;
+  width: clamp(180px, 25vw, 310px);
 }
 
-.logo-star {
-  position: absolute;
-  top: -9px;
-  left: -9px;
-  color: var(--yellow);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
+.logo img {
+  width: 100%;
+  height: auto;
 }
 
 .language-switch {
